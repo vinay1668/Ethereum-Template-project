@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+.inptbox{
+  position: relative;
+  top:20px;
+  visibility: none;
+}
 
 .App-logo {
   height: 40vmin;
@@ -27,6 +32,8 @@
 .App-link {
   color: #61dafb;
 }
+
+
 
 @keyframes App-logo-spin {
   from {

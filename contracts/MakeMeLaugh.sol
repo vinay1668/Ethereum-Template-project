@@ -1,5 +1,6 @@
 //SPDX-License-Identifier: Unlicense
 //SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.3;
 
 contract MakeMeLaugh{
@@ -23,19 +24,20 @@ contract MakeMeLaugh{
         paymentWithId[jokes.length]= msg.sender;
         
     }
+
+
     function sendEther(uint _id) public payable{
+
+    
         address temp = paymentWithId[_id];
-        payable(temp).transfer(msg.value);
-        
-        jokes[_id].etherSent = jokes[_id].etherSent + msg.value;
+        payable(temp).transfer(1 ether);
+        jokes[_id].etherSent = jokes[_id].etherSent + 1;
+    }
+    function jokeLength() public view returns(uint){
+        return jokes.length;
     }
  
 }
-
-
-
-
-
 
 
 
